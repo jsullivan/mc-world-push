@@ -33,7 +33,14 @@ if [ -d "$HOME/Library/Application Support/minecraft/saves/Aincrad" ]; then
     echo "Doing nothing."
   fi
 
+  # Run script on remote host
+  ssh josh@107.170.3.94 'source scripts/process_map.sh'
+
   # Announce job completion
+  echo "====================================="
+  echo "Done! Go to http://mc.minecraft.com"
+  echo "====================================="
+
 else 
   echo "No recent world saves found."
 fi
